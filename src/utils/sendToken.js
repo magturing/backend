@@ -8,7 +8,7 @@ export const sendToken = async (res,user,message,statusCode) => {
 
     const options = {
         httpOnly:true,
-        secure:true,
+        secure:false,
         sameSite:"none",
     };
 
