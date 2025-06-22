@@ -7,9 +7,9 @@ export const sendToken = async (res,user,message,statusCode) => {
     await user.save();
 
     const options = {
-        httpOnly:false,
+        httpOnly:true,
         secure:true,
-        sameSite:"none",
+        sameSite:"lax",
     };
 
     user = user.toObject();
