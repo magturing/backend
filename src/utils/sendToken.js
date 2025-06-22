@@ -9,7 +9,7 @@ export const sendToken = async (res,user,message,statusCode) => {
     const options = {
         httpOnly:true,
         secure:false,
-        sameSite:"none",
+        sameSite:"lax",
     };
 
     user = user.toObject();
