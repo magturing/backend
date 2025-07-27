@@ -23,7 +23,7 @@ import { changePasswordRateLimiter } from "../../utils/rateLimiter.js";
 router.route("/signup").post(signUp);
 router.route("/login").post(login);
 router.route("/admin/users").get(isAuthenticated,isAuthorizedAdmin,getAllUsers);
-router.route("/users").get(getAllUsers);
+router.route("/").get(getAllUsers);
 router.route("/me").get(isAuthenticated,myProfile).patch(isAuthenticated,updateUser);
 router.route("/changePassword").post(isAuthenticated,changePasswordRateLimiter,changePassword);
 router.route("/delete/me").delete(isAuthenticated,deleteUser);
